@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Acceso</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Panel Acceso</h1>
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar cliente..." />
+    </div>
+    <!-- Barra de búsqueda -->
+    <div class="form-container">
+      <input type="text" id="companyName" placeholder="Nombre de la Empresa" />
+      <input
+        type="text"
+        id="ipAddress"
+        placeholder="Dirección IP (ej: 192.168.1.10)"
+      />
+      <button id="addLinkButton">Agregar Cliente</button>
+    </div>
+
+    <div class="container" id="linkContainer"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
