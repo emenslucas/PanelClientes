@@ -89,3 +89,26 @@ input{
   background: none;
   margin-left: auto;
 }
+
+.containerbtn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ip-address {
+  cursor: pointer;
+  font-size: 14px;
+  color: #efefef;
+  background-color: #ef5b1740;
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.delete-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
