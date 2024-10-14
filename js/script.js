@@ -34,12 +34,12 @@ function addClientLink(clientData) {
     copyMessage.classList.add("copy-message");
     copyMessage.style.position = "absolute"; // Para que no esté dentro del flujo normal del contenedor
     copyMessage.style.top = "-30px"; // Ajusta esta posición según tus necesidades
-    copyMessage.style.left = "0";
     copyMessage.style.display = "none"; // Ocultar inicialmente
-    copyMessage.style.backgroundColor = "#333"; // Estilo similar a un tooltip
-    copyMessage.style.color = "#fff";
+    copyMessage.style.backgroundColor = "#ef5b171b"; // Estilo similar a un tooltip
+    copyMessage.style.color = "#ef5b17";
     copyMessage.style.padding = "5px";
     copyMessage.style.borderRadius = "3px";
+    copyMessage.style.fontSize = "14px";
     copyMessage.textContent = "Dirección IP copiada!";
     
     linkItem.appendChild(copyMessage); // Añadir mensaje al contenedor principal
@@ -49,7 +49,7 @@ function addClientLink(clientData) {
             copyMessage.style.display = "block"; // Mostrar mensaje
             setTimeout(() => {
                 copyMessage.style.display = "none"; // Ocultar después de 2 segundos
-            }, 2000);
+            }, 500);
         });
     });
 
