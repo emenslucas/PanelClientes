@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel Acceso</title>
+    <title>Panel de Acceso</title>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <h1>Panel Acceso</h1>
+</head>
+<body>
+    <h1>Panel de Acceso</h1>
     
     <div class="container">
- <!-- Barra de búsqueda -->
- <div class="search-container">
-  <input type="text" id="searchInput" placeholder="Buscar cliente..." />
-</div>
-<!-- Barra de búsqueda -->
-<div class="form-container">
-  <div class="fstContainer">
-    <input type="text" id="companyName" placeholder="Nombre de la Empresa" />
-    <input type="text" id="ipAddress" placeholder="Dirección IP (ej: 192.168.1.10)" />
-  </div>
-  <textarea id="description" name="description" placeholder="Descripción..."></textarea>
-  <button id="addLinkButton">Agregar Cliente</button>
-</div>
-
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar cliente..." />
+        </div>
+        <form id="clientForm" class="form-container">
+            <div class="fstContainer">
+                <input type="text" id="companyName" placeholder="Nombre de la Empresa" required />
+                <input type="text" id="ipAddress" placeholder="Dirección IP (ej: 192.168.1.10)" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" />
+            </div>
+            <textarea id="description" name="description" placeholder="Descripción..."></textarea>
+            <button type="submit">Agregar Cliente</button>
+        </form>
     </div>
-   
-
+    
     <div class="linksContainer" id="linkContainer"></div>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Descripción</h2>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
