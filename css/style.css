@@ -41,7 +41,7 @@ a:hover {
 }
 
 .form-container {
-  background-color: #ef5b1728;
+  background-color: #5d677c50;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -56,8 +56,18 @@ a:hover {
   border: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: #f1f1f3;
+  background-color: #282c35;
+  color: white;
   width: 100%;
+}
+
+.search-container input{
+  background-color: #5d677c50;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.665);
+  opacity: 1; /* Firefox */
 }
 
 .form-container button {
@@ -100,13 +110,25 @@ a:hover {
   width: 100%;
 }
 
+.subcontainerbtn{
+  display: flex;
+  align-items: center;
+}
+
+.subcontainerbtn button{
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
 .ip-address {
   cursor: pointer;
   font-size: 14px;
-  color: #efefef;
-  background-color: #ef5b1740;
+  color: #ef5b17;
+  background-color: #ef5b171b;
   padding: 5px;
   border-radius: 5px;
+  margin: 0;
 }
 
 .modal {
@@ -124,14 +146,13 @@ a:hover {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #282c35;
   padding: 20px;
-  border: 1px solid #888;
   width: 80%;
   max-width: 600px;
   max-height: 80vh;
   border-radius: 10px;
-  color: #282c35;
+  color: white;
   overflow-y: auto;
 }
 
@@ -141,16 +162,18 @@ a:hover {
 }
 
 .close {
-  color: #aaa;
+  color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #ef5b17;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.2s;
 }
