@@ -30,28 +30,27 @@ function addClientLink(clientData) {
     ipAddressContainer.textContent = clientData.ip;
     ipAddressContainer.classList.add("ip-address");
 
-    const copyMessage = document.createElement("span");
-    copyMessage.classList.add("copy-message");
-    copyMessage.style.position = "absolute"; // Para que no esté dentro del flujo normal del contenedor
-    copyMessage.style.left = "94px";
-    copyMessage.style.textAlign = "center";
-    copyMessage.style.display = "none"; // Ocultar inicialmente
-    copyMessage.style.color = "#ef5b17";
-    copyMessage.style.padding = "5px";
-    copyMessage.style.borderRadius = "3px";
-    copyMessage.style.fontSize = "14px";
-    copyMessage.textContent = "Dirección IP copiada!";
+    const mensajeTemporal = "IP Copiada!";
+    const duration = 500; // Duración de 2 segundos
     
-    linkItem.appendChild(copyMessage); // Añadir mensaje al contenedor principal
-
-    ipAddressContainer.addEventListener("click", () => {
+    // Función que cambia el texto temporalmente
+    function changeTextTemporarily(element, newText, duration) {
+        const originalText = element.textContent; // Guardamos el texto original
+        element.textContent = newText; // Cambiamos al nuevo texto temporal
+    
+        // Restaurar el texto original después de la duración especificada
+        setTimeout(() => {
+            element.textContent = originalText;
+        }, duration);
+    }
+    
+    // Escuchamos el clic en el contenedor de la IP
+    ipAddressContainer.addEventListener('click', () => {
         navigator.clipboard.writeText(clientData.ip).then(() => {
-            copyMessage.style.display = "block"; // Mostrar mensaje
-            setTimeout(() => {
-                copyMessage.style.display = "none"; // Ocultar después de 2 segundos
-            }, 500);
+            changeTextTemporarily(ipAddressContainer, mensajeTemporal, duration); // Cambia a "IP Copiada!" temporalmente
         });
     });
+    
 
     // SVG para el botón de eliminar
     const deleteSvg = ` 
