@@ -87,8 +87,6 @@ infoButton.addEventListener("click", function () {
   buttonAndIpContainer.appendChild(ipAddressContainer);
   buttonAndIpContainer.appendChild(buttonsContainer);
 
- 
-
   // Crear un contenedor para colocar todo, con la IP y el botón arriba, y el link abajo
   const contentContainer = document.createElement("div");
   contentContainer.style.display = "flex";
@@ -101,7 +99,6 @@ infoButton.addEventListener("click", function () {
   linkItem.appendChild(contentContainer);
   document.getElementById("linkContainer").appendChild(linkItem);
 }
-
 
 
 // Evento para agregar un nuevo cliente

@@ -8,20 +8,26 @@
   </head>
   <body>
     <h1>Panel Acceso</h1>
-    <!-- Barra de búsqueda -->
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Buscar cliente..." />
-    </div>
-    <!-- Barra de búsqueda -->
-    <div class="form-container">
-      <input type="text" id="companyName" placeholder="Nombre de la Empresa" />
-      <input type="text" id="ipAddress" placeholder="Dirección IP (ej: 192.168.1.10)" />
-      <input type="text" id="description" placeholder="Descripción" /> <!-- Nuevo campo de descripción -->
-      <button id="addLinkButton">Agregar Cliente</button>
-    </div>
     
+    <div class="container">
+ <!-- Barra de búsqueda -->
+ <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Buscar cliente..." />
+</div>
+<!-- Barra de búsqueda -->
+<div class="form-container">
+  <div class="fstContainer">
+    <input type="text" id="companyName" placeholder="Nombre de la Empresa" />
+    <input type="text" id="ipAddress" placeholder="Dirección IP (ej: 192.168.1.10)" />
+  </div>
+  <textarea id="description" name="description" placeholder="Descripción..."></textarea>
+  <button id="addLinkButton">Agregar Cliente</button>
+</div>
 
-    <div class="container" id="linkContainer"></div>
+    </div>
+   
+
+    <div class="linksContainer" id="linkContainer"></div>
 
     <script src="js/script.js"></script>
   </body>
