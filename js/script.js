@@ -33,9 +33,9 @@ function addClientLink(clientData) {
     const copyMessage = document.createElement("span");
     copyMessage.classList.add("copy-message");
     copyMessage.style.position = "absolute"; // Para que no esté dentro del flujo normal del contenedor
-    copyMessage.style.top = "-30px"; // Ajusta esta posición según tus necesidades
+    copyMessage.style.left = "94px";
+    copyMessage.style.textAlign = "center";
     copyMessage.style.display = "none"; // Ocultar inicialmente
-    copyMessage.style.backgroundColor = "#ef5b171b"; // Estilo similar a un tooltip
     copyMessage.style.color = "#ef5b17";
     copyMessage.style.padding = "5px";
     copyMessage.style.borderRadius = "3px";
