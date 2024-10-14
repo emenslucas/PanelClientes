@@ -106,9 +106,8 @@ input{
   width: fit-content;
 }
 
-.delete-button {
+.delete-button, .info-button {
   border: none;
   background: none;
   cursor: pointer;
-  color: white;
 }
