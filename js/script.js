@@ -55,7 +55,7 @@ function addClientLink(clientData) {
     localStorage.setItem("clients", JSON.stringify(updatedClients));
   });
 
-  // Crear el botón de eliminar con SVG
+  // Crear el botón de info con SVG
   const infoButton = document.createElement("button");
   infoButton.classList.add("info-button");
 
@@ -67,14 +67,14 @@ function addClientLink(clientData) {
   `;
 
   // Evento para mostrar la descripción
-infoButton.addEventListener("click", function () {
-  alert(`Descripción: ${clientData.description}`);
-});
+  infoButton.addEventListener("click", function () {
+    alert(`Descripción: ${clientData.desc}`);
+  });
 
- // Crear el contenedor para boton info y delete y
- const buttonsContainer = document.createElement("div");
- buttonsContainer.appendChild(infoButton);
- buttonsContainer.appendChild(deleteButton);
+  // Crear el contenedor para boton info y delete
+  const buttonsContainer = document.createElement("div");
+  buttonsContainer.appendChild(infoButton);
+  buttonsContainer.appendChild(deleteButton);
 
   // Crear el contenedor para la IP y el botón de eliminar en la misma línea
   const buttonAndIpContainer = document.createElement("div");
@@ -100,14 +100,15 @@ infoButton.addEventListener("click", function () {
   document.getElementById("linkContainer").appendChild(linkItem);
 }
 
-
 // Evento para agregar un nuevo cliente
 document.getElementById("addLinkButton").addEventListener("click", function () {
   const companyName = document.getElementById("companyName").value;
   const ipAddress = document.getElementById("ipAddress").value;
+  const description = document.getElementById("description").value;
+  console.log(description);
 
   if (companyName !== "" && ipAddress !== "") {
-    const clientData = { name: companyName, ip: ipAddress };
+    const clientData = { name: companyName, ip: ipAddress, desc: description };
 
     // Agregar cliente al localStorage
     const clients = JSON.parse(localStorage.getItem("clients")) || [];
@@ -120,6 +121,7 @@ document.getElementById("addLinkButton").addEventListener("click", function () {
     // Limpiar los campos de entrada
     document.getElementById("companyName").value = "";
     document.getElementById("ipAddress").value = "";
+    document.getElementById("description").value = "";
   } else {
     alert("Por favor, ingrese el nombre de la empresa y la dirección IP.");
   }
