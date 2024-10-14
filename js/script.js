@@ -123,7 +123,7 @@ searchInput.addEventListener("input", () => {
 // Funcionalidad del modal
 function showModal(text) {
     modalText.textContent = text;
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 closeModal.onclick = () => modal.style.display = "none";
